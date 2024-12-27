@@ -1,0 +1,325 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    background-color: #000;
+}
+
+.background-video video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.5);
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header h1 {
+    font-size: 28px;
+    color: #e10600;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.header nav a:hover,
+.header nav a.active {
+    color: #e10600;
+    text-shadow: 0 0 5px #e10600;
+}
+.hero {
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    background: linear-gradient(90deg, #e10600, #fff, #e10600);
+    -webkit-animation: text;
+    color: transparent;
+    animation: textScroll 5s linear infinite;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+@keyframes textScroll {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+.facts {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.facts h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.fact-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h4 {
+    color: #e10600;
+    margin-bottom: 10px;
+}
+.gallery {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.gallery h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.7);
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    font-size: 14px;
+}
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: #000;
+    overflow-x: hidden;
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header h1 {
+    font-size: 28px;
+    color: #e10600;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.header nav a:hover,
+.header nav a.active {
+    color: #e10600;
+    text-shadow: 0 0 5px #e10600;
+}
+.promo-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #000, #e10600);
+    text-align: center;
+    animation: backgroundSlide 5s infinite alternate;
+}
+
+.promo-content {
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.promo-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #e10600, #fff, #e10600);
+    color: transparent;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    animation: glowingText 3s infinite alternate;
+}
+
+.promo-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ddd;
+    animation: slideUp 1.5s ease-in-out;
+}
+
+.subscription-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.subscription-form input {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #222;
+    color: #fff;
+    width: 70%;
+}
+
+.subscription-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #e10600;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.subscription-form button:hover {
+    background: #ff4500;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes glowingText {
+    from {
+        text-shadow: 0 0 10px #e10600, 0 0 20px #e10600, 0 0 30px #e10600;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px #fff;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes backgroundSlide {
+    from {
+        background: linear-gradient(45deg, #000, #e10600);
+    }
+    to {
+        background: linear-gradient(45deg, #e10600, #000);
+    }
+}
+.race-car {
+    position: absolute;
+    bottom: 50px;
+    left: -200px;
+    animation: drive 8s linear infinite;
+}
+.news-ticker {
+    background: #e10600;
+    color: #fff;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.news-ticker p {
+    display: inline-block;
+    animation: ticker 10s linear infinite;
+}
+
+@keyframes ticker {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

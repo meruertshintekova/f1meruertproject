@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 Teams</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f0f0f;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background: #d50000;
+            padding: 20px 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav button {
+            background-color: #333;
+            color: white;
+            border: 2px solid #d50000;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        nav button:hover {
+            background-color: #d50000;
+            color: white;
+        }
+        .content {
+            width: 80%;
+            max-width: 1000px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .team {
+            display: none;
+            width: 100%;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease;
+        }
+        .team img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        .team div {
+            display: inline-block;
+            vertical-align: top;
+            color: #fff;
+        }
+        .team h3 {
+            color: #d50000;
+            margin: 0;
+        }
+        .team p {
+            margin: 5px 0;
+        }
+        .team h4 {
+            font-size: 1.1em;
+            margin-top: 10px;
+            color: #ddd;
+        }
+        footer {
+            background: #333;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            position: fixed;
+            bottom: 0;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Formula 1 Teams
+</header>
+
+<nav>
+    <button onclick="showTeam('mercedes')">Mercedes-AMG Petronas</button>
+    <button onclick="showTeam('redbull')">Red Bull Racing</button>
+    <button onclick="showTeam('ferrari')">Scuderia Ferrari</button>
+    <button onclick="showTeam('mclaren')">McLaren</button>
+    <button onclick="showTeam('alpine')">Alpine</button>
+    <button onclick="showTeam('alpha')">Visa Cash App RB</button>
+    <button onclick="showTeam('aston')">Aston Martin</button>
+    <button onclick="showTeam('williams')">Williams</button>
+    <button onclick="showTeam('sauber')">Stake F1 Team Kick Sauber</button>
+</nav>
+
+<div class="content">
+    <div class="team" id="mercedes">
+        <h3>Mercedes-AMG Petronas</h3>
+        <div>
+            <h4>Drivers: Lewis Hamilton / George Russell</h4>
+            <img src="https://www.si.com/.image/t_share/MjAwNDcxNDgyNTMzNDIyMTg4/f425otlwiaamrzd.jpg"
+              alt="Mercedes">
+            <p><strong>Team Principal:</strong> Toto Wolff</p>
+            <p><strong>Country:</strong> Germany</p>
+        </div>
+    </div>
+    <div class="team" id="redbull">
+        <h3>Red Bull Racing Honda</h3>
+        <div>
+            <h4>Drivers: Max Verstappen / Sergio Perez</h4>
+            <img src="https://static.independent.co.uk/2023/04/04/13/GettyImages-1478650102.jpg" alt="Red Bull">
+            <p><strong>Team Principal:</strong> Christian Horner</p>
+            <p><strong>Country:</strong> Austria</p>
+        </div>
+    </div>
+    <div class="team" id="ferrari">
+        <h3>Scuderia Ferrari Mission Winnow</h3>
+        <div>
+            <h4>Drivers: Charles Leclerc / Carlos Sainz</h4>
+            <img src="https://cdn.racingnews365.com/2023/Sainz/_1092x683_crop_center-center_85_none/XPB_1188509_HiRes.jpg?v=1709111629" alt="Ferrari">
+            <p><strong>Team Principal:</strong> Frederic Vasseur</p>
+            <p><strong>Country:</strong> Italy</p>
+        </div>
+    </div>
+    <div class="team" id="mclaren">
+        <h3>McLaren F1 Team</h3>
+        <div>
+            <h4>Drivers: Lando Norris / Oscar Piastri</h4>
+            <img src="https://cdn.racingnews365.com/2024/Norris/_1092x683_crop_center-center_85_none/Norris-Piastri_2024-11-11-134255_edsf.jpg?v=1731475814" alt="McLaren">
+            <p><strong>Team Principal:</strong> Andrea Stella</p>
+            <p><strong>Country:</strong> United Kingdom</p>
+        </div>
+    </div>
+    <div class="team" id="alpine">
+        <h3>Alpine F1 Team</h3>
+        <div>
+            <h4>Drivers: Esteban Ocon / Pierre Gasly</h4>
+            <img src="https://www.si.com/.image/t_share/MjA0MjI3ODAzNzUzNzUyNDYx/gfvdwojxeaamsd3.jpg" alt="Alpine">
+            <p><strong>Team Principal:</strong> Otmar Szafnauer</p>
+            <p><strong>Country:</strong> France</p>
+        </div>
+    </div>
+    <div class="team" id="alpha">
+        <h3>Visa Cash App RB Formula One Team</h3>
+        <div>
+            <h4>Drivers: Yuki Tsunoda / Daniel Ricciardo</h4>
+            <img src="https://www.motorsinside.com/images/photo/article/f12024/visacashapprb-tsunoda-ricciardo-combinaison-presentation.jpg" alt="AlphaTauri">
+            <p><strong>Team Principal:</strong> Franz Tost</p>
+            <p><strong>Country:</strong> Italy</p>
+        </div>
+    </div>
+    <div class="team" id="aston">
+        <h3>Aston Martin Cognizant F1 Team</h3>
+        <div>
+            <h4>Drivers: Lance Stroll / Fernando Alonso</h4>
+            <img src="https://www.everythingf1.com/wp-content/smush-webp/2023/05/1677547874-fernando-alonso-lance-stroll-69.jpg.webp" alt="Aston Martin">
+            <p><strong>Team Principal:</strong> Mike Krack</p>
+            <p><strong>Country:</strong> United Kingdom</p>
+        </div>
+    </div>
+    <div class="team" id="williams">
+        <h3>Williams Racing</h3>
+        <div>
+            <h4>Drivers: Alex Albon / Logan Sargeant</h4>
+            <img src="https://cdn.williamsf1.tech/images/fnx611yr/production/7224e6fb6cd66c14e7868a34f165b7760e7c0fea-2860x1608.jpg?w=1200&auto=format" alt="Williams">
+            <p><strong>Team Principal:</strong> James Vowles</p>
+            <p><strong>Country:</strong> United Kingdom</p>
+        </div>
+    </div>
+    <div class="team" id="sauber">
+        <h3>Stake F1 Team Kick Sauber</h3>
+        <div>
+            <h4>Drivers: Valtteri Bottas / Guanyu Zhou</h4>
+            <img src="https://media.formula1.com/image/upload/t_16by9Centre/f_auto/q_auto/v1730895005/fom-website/2024/Kick%20Sauber/Formula%201%20header%20template%20-%202024-11-06T120952.299.png" alt="Sauber">
+            <p><strong>Team Principal:</strong> Alessandro Alunni Bravi</p>
+            <p><strong>Country:</strong> Switzerland</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2024 Formula 1 Teams | All Rights Reserved
+</footer>
+
+<script>
+    function showTeam(teamId) {
+        const allTeams = document.querySelectorAll('.team');
+        allTeams.forEach(team => team.style.display = 'none');
+        const selectedTeam = document.getElementById(teamId);
+        selectedTeam.style.display = 'block';
+    }
+    showTeam('mercedes');
+</script>
+
+</body>
+</html>
+            <link rel="stylesheet" href="static /styles/style.css">

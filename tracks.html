@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 Tracks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
+            color: #ffffff;
+        }
+        header {
+            background: #d50000;
+            padding: 20px 10px;
+            text-align: center;
+            font-size: 2.5em;
+            color: white;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        nav {
+            background: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #d50000;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        h2 {
+            color: #d50000;
+            margin-bottom: 15px;
+        }
+        .section {
+            background: #222;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+        .track {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            animation: fadeInUp 1s ease;
+        }
+        .track img {
+            width: 120px;
+            height: 80px;
+            object-fit: cover;
+            margin-right: 15px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .track h3 {
+            margin: 0;
+            color: #d50000;
+        }
+        .track p {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+        .clock {
+            font-size: 2em;
+            color: #d50000;
+            margin-top: 10px;
+            text-align: center;
+            animation: pulse 1s infinite;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Formula 1 Tracks
+</header>
+
+<nav>
+    <a href="#upcoming">Upcoming Races</a>
+    <a href="#past">Past Races</a>
+    <a href="#live">Live Stream</a>
+</nav>
+
+<div class="content">
+
+    <div class="clock" id="clock"></div>
+    <div id="upcoming" class="section">
+        <h2>Upcoming Races</h2>
+        <div class="track">
+            <img src="https://www.everythingf1.com/wp-content/uploads/2024/02/Bahrain-Track.jpeg"
+             width="400" height="400" alt="Bahrain">
+            <div>
+                <h3>Bahrain Grand Prix</h3>
+                <p><strong>Date:</strong> 3 March 2025</p>
+                <p><strong>Location:</strong> Bahrain International Circuit</p>
+            </div>
+        </div>
+        <div class="track">
+            <img src="https://i.ytimg.com/vi/zv5D2ieLp34/maxresdefault.jpg
+            " width="400" height="400" alt="Saudi Arabia">
+            <div>
+                <h3>Saudi Arabian Grand Prix</h3>
+                <p><strong>Date:</strong> 17 March 2025</p>
+                <p><strong>Location:</strong> Jeddah Corniche Circuit</p>
+            </div>
+        </div>
+        <div class="track">
+            <img src="https://www.austadiums.com/news/images/albert-park-GF.jpg"
+             width="400" height="400" alt="Australia">
+            <div>
+                <h3>Australian Grand Prix</h3>
+                <p><strong>Date:</strong> 31 March 2025</p>
+                <p><strong>Location:</strong> Albert Park Circuit, Melbourne</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="past" class="section">
+        <h2>Past Races</h2>
+        <div class="track">
+            <img src="https://static.myconnect.ae/-/media/yasconnect/project/ymc/formula1/landing/gallery/2024/f1-2024-gallery2-1280x720.jpg?w=1366"
+             width="400" height="400" alt="Abu Dhabi">
+            <div>
+                <h3>Abu Dhabi Grand Prix</h3>
+                <p><strong>Date:</strong> 26 November 2023</p>
+                <p><strong>Winner:</strong> Max Verstappen (Red Bull Racing)</p>
+            </div>
+        </div>
+        <div class="track">
+            <img src="https://cdn-7.motorsport.com/images/amp/0ZRkyJR0/s6/formula-1-brazilian-gp-2019-ro-2.jpg" 
+            width="400" height="400" alt="Brazil">
+            <div>
+                <h3>Brazilian Grand Prix</h3>
+                <p><strong>Date:</strong> 5 November 2023</p>
+                <p><strong>Winner:</strong> Lando Norris (McLaren)</p>
+            </div>
+        </div>
+
+    <div id="live" class="section">
+        <h2>Live Stream</h2>
+        <p>Watch the race live by clicking the button below:</p>
+        <p><a href="https://f1.com" target="_blank" style="color: #d50000; text-decoration: underline;">Go to Live Stream</a></p>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2024 Formula 1 Tracks | All Rights Reserved
+</footer>
+
+<script>
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        document.getElementById('clock').textContent
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+</body>
+</html>
+    

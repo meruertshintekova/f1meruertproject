@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #d50000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .shop-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .product-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-details {
+            padding: 10px;
+        }
+        .product-details h3 {
+            color: #d50000;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+        .product-details p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .product-price {
+            font-size: 1.3em;
+            color: #333;
+            font-weight: bold;
+        }
+        .add-to-cart-button {
+            background-color: #d50000;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .add-to-cart-button:hover {
+            background-color: #b40000;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        @keyframes glowing {
+            0% {
+                text-shadow: 0 0 5px #d50000, 0 0 10px #d50000, 0 0 15px #d50000;
+            }
+            50% {
+                text-shadow: 0 0 10px #d50000, 0 0 20px #d50000, 0 0 30px #d50000;
+            }
+            100% {
+                text-shadow: 0 0 5px #d50000, 0 0 10px #d50000, 0 0 15px #d50000;
+            }
+        }
+        header {
+            animation: glowing 1.5s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Formula 1 Official Merchandise
+</header>
+
+<div class="shop-container">
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://www.fuelforfans.com/dw/image/v2/BDWJ_PRD/on/demandware.static/-/Sites-master-catalog/default/dw0473ac5d/images/large/130191093600_pp_1_FERRARI.jpg?sw=1600&sh=1600&sm=fit" alt="F1 T-shirt">
+        </div>
+        <div class="product-details">
+            <h3>Formula 1 T-shirt</h3>
+            <p>Official F1 t-shirt made from high-quality fabric, perfect for any F1 fan!</p>
+            <div class="product-price">$35.99</div>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://shop-int.mercedesamgf1.com/cdn/shop/files/MAPF1_FW_RP_LH_DRIVER_CAP_FRONT.jpg?v=1734700778&width=3200" alt="F1 Cap">
+        </div>
+        <div class="product-details">
+            <h3>Formula 1 Cap</h3>
+            <p>Get your official F1 cap, designed for style and comfort. Perfect for sunny race days!</p>
+            <div class="product-price">$25.99</div>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://images.footballfanatics.com/formula-1-merchandise/formula-1-logo-mug_ss5_p-14421338+u-z3xtqp4qtsgxo5u9lggu+v-puv0sgrh3mjyjbw14i0x.jpg?_hv=2" alt="F1 Mug">
+        </div>
+        <div class="product-details">
+            <h3>Formula 1 Mug</h3>
+            <p>Enjoy your morning coffee with this stylish Formula 1 mug featuring your favorite team logo!</p>
+            <div class="product-price">$45.99</div>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://hypcourt.co.za/cdn/shop/files/1C5A9349-_-scaled-e1688053249890_900x_1_7ddeb9e5-dd14-4aba-b44e-2234f9072645.jpg?v=1721055708" alt="F1 Jacket">
+        </div>
+        <div class="product-details">
+            <h3>Formula 1 Jacket</h3>
+            <p>Stay warm and stylish with the official F1 jacket. Perfect for chilly race days.</p>
+            <div class="product-price">$350</div>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    &copy; 2024 Formula 1 Official Shop | All Rights Reserved
+</footer>
+
+</body>
+</html>
+            <link rel="stylesheet" href="static /styles/style.css">
